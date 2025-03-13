@@ -154,13 +154,13 @@ body::before{
     height:500px;
 }
 
-.about h1{
+.about-us h1, .mission h1{
     color:white;
     font-size:35px;
     font-family:"Courier New", Courier, monospace;
 }
 
-.about p{
+.about-us p, .mission p{
     color:white;
     font-size: 20px;
     height:400px;
@@ -178,6 +178,31 @@ body::before{
     border:1px solid white;
     height:500px;
     margin-bottom:0;
+}
+
+.more-about-us{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.origin, .journey, .motivation{
+    display:flex;
+    width:70%;
+}
+
+.more-about-us h1, .journey h1, .motivation h1{
+    color:white;
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.more-about-us p, .journey p, .motivation p{
+    color:white;
+    width:60%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
 }
 
 .CTA2{
@@ -341,7 +366,7 @@ body::before{
 }
 
 @media only screen and (max-width:615px){
-    
+
     .services-offered{
         display:flex;
         flex-direction: column;
@@ -360,6 +385,12 @@ body::before{
     .home-body p{
         font-size:17px;
         width:300px;
+    }
+}
+
+@media only screen and (max-width:430px){
+    .origin, .journey, .motivation{
+        width:100%;
     }
 }
 
