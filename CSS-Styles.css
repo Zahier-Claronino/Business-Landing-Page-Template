@@ -14,6 +14,7 @@ header{
 }
 .home{
     width:100%;
+    min-height:100vh;
     
 }
 
@@ -131,7 +132,7 @@ body::before{
 /*STYLING FOR THE ABOUT SECTION STARTS HERE*/
 .about{
     width:100%;
-    height:742.40px;
+    min-height:100vh;
     display:flex;
     flex-direction: column; 
     align-items: center; 
@@ -205,9 +206,12 @@ body::before{
     cursor:pointer;
 }
 
-.services{
+.services-section{
     width:100%;
-    height: 100vh;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .services-heading{
@@ -231,11 +235,13 @@ body::before{
     position: relative;
     z-index: 2;
     height:500px;
-    background-color:rgba(37, 27, 27, 0.9);
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width:100%;
+    background-color:rgba(37, 27, 27, 0.9);display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    gap:10px;
+    place-items: center;
+    height: 100%;
+    width:70%;
     
 }
 
@@ -274,6 +280,13 @@ body::before{
         font-size:23px;
     }
 }
+
+@media only screen and (max-width:880px){
+    .services-offered{
+        width:100%;
+    }
+}
+
 
 @media only screen and (max-width:845px){
     .home-body h1{
@@ -324,6 +337,16 @@ body::before{
     .about-us, .mission{
         height:600px;
     }
+
+}
+
+@media only screen and (max-width:615px){
+    
+    .services-offered{
+        display:flex;
+        flex-direction: column;
+    }
+
 
 }
 
