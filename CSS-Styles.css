@@ -1,0 +1,391 @@
+html, body{
+    margin:0;
+    overflow-x:hidden;
+    height:100vh;
+    background-image:url("home-background.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    transition:0.5s ease-in-out;
+    opacity: 1;
+}
+header{
+    margin:0;
+}
+.home{
+    width:100%;
+    
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);  
+    z-index: 1; 
+}
+
+.nav-banner{
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.7);
+    position: fixed;
+    z-index: 3;
+    
+}
+
+#business-name{
+    font-size: 45px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-buttons{
+    width:33%;
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+
+.nav-buttons button{
+    background-color: transparent;
+    font-size:large;
+    border:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:800;  
+    transition:color 0.2s ease-in-out, border-bottom 0.1s ease-in-out;
+}
+
+
+
+.nav-buttons button:hover{
+    cursor: pointer;
+     color:gray;
+    border-bottom: dashed;
+}
+
+
+#menu-button{
+    display:none;
+    background-color: transparent;
+    border:none;
+    font-size:42px;
+
+}
+
+.home-body{
+    height:740px;
+    position: relative;
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.home-body h1{
+    color:white;
+    text-align:center;
+    font-size:45px;
+    width:1000px;
+    font-family:sans-serif;
+    margin-bottom:0;
+}
+
+
+
+.intro-sentence p{
+    text-align:center;
+    width:750px;
+    color:white;
+    font-size:25px;
+    font-weight: lighter;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom:0;
+}
+
+#CTA{
+    height:35px;
+    font-size:large;
+    color:white ;
+    background-color:gray;
+    border:none;
+    border-radius:15px 15px 15px;
+    transition:0.2s ease-in-out;
+    margin-top:0;
+}
+
+#CTA:hover{
+    cursor: pointer;
+    background-color:black;
+    color:lightblue;
+}
+
+
+/*STYLING FOR THE ABOUT SECTION STARTS HERE*/
+.about{
+    width:100%;
+    height:742.40px;
+    display:flex;
+    flex-direction: column; 
+    align-items: center; 
+    position: relative;
+    z-index: 2;
+}
+
+.row{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-us{
+    
+    text-align: center;
+    border:1px solid white;
+    height:500px;
+}
+
+.about h1{
+    color:white;
+    font-size:35px;
+    font-family:"Courier New", Courier, monospace;
+}
+
+.about p{
+    color:white;
+    font-size: 20px;
+    height:400px;
+    display:flex;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width:500px;
+    border:1px solid white;
+}
+
+.mission{
+    position: relative;
+    z-index:2;
+    text-align: center;
+    border:1px solid white;
+    height:500px;
+    margin-bottom:0;
+}
+
+.CTA2{
+    display:flex;
+
+    justify-content: center;
+    position:relative;
+    z-index:2;
+    background-color: transparent;
+    
+}
+
+#CTA2{
+    background-color:darkslategray;
+    font-size: 17px;
+    border-radius: 15px 15px 15px;
+    height:35px;
+    border:none;
+    color:white;
+    width:120px;
+}
+
+#CTA2:hover{
+    background-color: maroon;
+    color: lightblue;
+    cursor:pointer;
+}
+
+.services{
+    width:100%;
+    height: 100vh;
+}
+
+.services-heading{
+    display:flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    height:100px;
+    
+}
+
+
+
+.services-heading h1{
+    color:white;
+    font-size:35px;
+    font-family:"Courier New", Courier, monospace;
+}
+
+.services-offered{
+    position: relative;
+    z-index: 2;
+    height:500px;
+    background-color:rgba(37, 27, 27, 0.9);
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    
+}
+
+.services-offered h2{
+    color:white;
+    font-family:"Courier New", Courier, monospace;
+    
+}
+
+.services-offered p{
+    color:white;
+    font-size:18px;
+    
+}
+.service1, .service2, .service3, .service4{
+
+    width:300px;
+}
+
+
+/*MEDIA QUERIES FOR RESPONSIVE DESIGN START HERE*/
+
+@media only screen and (max-width:1010px){
+    .about p{
+        width:350px;
+        font-size:18px;
+    }
+}
+
+@media only screen and (max-width:960px){
+    .home-body h1{
+        font-size:40px;
+    }
+    
+    .home-body p{
+        font-size:23px;
+    }
+}
+
+@media only screen and (max-width:845px){
+    .home-body h1{
+        font-size:35px;
+    }
+
+    .home-body p{
+        font-size:20px;
+    }
+}
+
+
+@media only screen and (max-width:810px){
+    .nav-buttons button{
+        opacity:0;
+    }
+
+    #menu-button{
+        display:block;
+    }
+}
+
+@media only screen and (max-width:745px){
+    .home-body h1{
+        width:600px;
+    }
+
+    .home-body p{
+        width:500px;
+    }
+}
+
+@media only screen and (max-width:715px){
+    .row{
+        flex-direction: column;
+    }
+
+
+    .home-body p{
+        width:500px;
+    }
+
+    .about p{
+        border: none;
+        border-top: 1px solid white;
+    }
+
+    .about-us, .mission{
+        height:600px;
+    }
+
+}
+
+@media only screen and (max-width:575px){
+    .home-body h1{
+        font-size:28px;
+        width:400px;
+    }
+
+
+    .home-body p{
+        font-size:17px;
+        width:300px;
+    }
+}
+
+
+
+@media only screen and (max-width:380px){
+    .home-body h1{
+        font-size:26px;
+        width:300px;
+    }
+
+    .home-body p{
+        font-size:16px;
+        width:200px;
+    }
+
+    #CTA{
+        font-size:medium;
+        height:30px;
+    }
+
+
+}
+
+@media only screen and (max-width:365px){
+    #business-name{
+        font-size:40px;
+    }
+}
+
+@media only screen and (max-width:360px){
+    .about p{
+        width:300px;
+    }
+}
+
+@media only screen and (max-width:325px){
+    #business-name{
+        font-size:35px;
+    }
+
+    #menu-button{
+        font-size:37px;
+    }
+}
+
+@media only screen and (max-width:286px){
+    .nav-banner{
+        justify-content: center;
+        gap:0px;
+    }
+}

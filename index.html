@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Landing Page</title>
+
+    <link rel="stylesheet" href="CSS-Styles.css">
+</head>
+<body>
+    <section class="home" id="home">
+        <!--navigation bar on top-->
+        <header>
+
+            <nav class="nav-banner">
+                <!--Replace evolution with business name-->
+                <h1 id="business-name">Evolution</h1>
+
+                <!--navigation buttons-->
+                <div class="nav-buttons">
+                    
+                    <button  name="home-btn" id="home-btn"><strong>Home</strong></button>
+                    <button  name="services-btn" id="services-btn"><strong>About</strong></button>
+                    <button  name="gallery-btn" id="gallery-btn"><strong>Services</strong></button>
+                    <button  name="features-btn" id="features-btn"><strong>Pricing</strong></button>
+                    <button  name="contact-btn" id="contact-btn"><strong>Contact</strong></button>
+
+                </div>
+
+                <!--hamburger button for responsive design (button with three horizontal lines)-->
+                <button name="hamburger-button" id="menu-button">&#9776;</button>
+
+            </nav>    
+
+        </header>
+
+
+        <div class="home-body">
+
+            <!--Home Tagline that represents your business-->
+            <h1>Short Tagline that represents your business.</h1>
+
+            <div class="intro-sentence">
+                <p>Short intro paragraph/sentence explaining what your business is about and what it represents</p>
+            </div>
+
+            <button id="CTA">Book a Consultation</button>
+
+        </div>  
+    </section>
+
+
+    <!--About section-->
+    <section class="about">
+        <div class="row">
+            <div class="about-us">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris aliquet malesuada feugiat. Curabitur fermentum 
+                    bibendum nulla, non dictum ipsum tincidunt non. Quisque 
+                    convallis pharetra tempor. Donec id pretium leo. Pellentesque
+                    luctus massa non elit viverra pellentesque. Cras vitae neque
+                    molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem.</p>
+            </div>
+            <div class="mission">
+                <h1>Our Mission</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris aliquet malesuada feugiat. Curabitur fermentum 
+                    bibendum nulla, non dictum ipsum tincidunt non. Quisque 
+                    convallis pharetra tempor. Donec id pretium leo. Pellentesque
+                    luctus massa non elit viverra pellentesque. Cras vitae neque
+                    molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem.</p>
+            </div>
+        </div><br>
+        <div class="CTA2" >
+            <button id="CTA2">Contact Us</button>
+        </div>
+    </section>
+
+    <!--Services Section-->
+    <section class="services-section">
+        <div class="services-heading">
+            <h1>Our Services</h1>
+        </div>
+
+        <div class="services-offered">
+            
+            <div class="service1">
+                <img src="services-placeholder-image1.png" width="150px" height="120px">
+                <h2>Responsive</h2>
+                <p>This is where you will explain each service you offer.We create visually 
+                    appealing and responsive websites that engage users across all devices, 
+                    ensuring a seamless browsing experience.make sure to explain your service in a concise yet thorough way</p>
+            </div>
+            <div class="service2">
+                <img src="services-placeholder-image2.png" width="150px" height="120px">
+                <h2>Sleek Design</h2>
+                <p>This is where you will explain each service you offer.We create visually 
+                    appealing and responsive websites that engage users across all devices, 
+                    ensuring a seamless browsing experience.make sure to explain your service in a concise yet thorough way</p>
+            </div>
+        
+        
+            <div class="service3">
+                <img src="services-placeholder-image3.png" width="150px" height="120px">
+                <h2>User Friendly</h2>
+                <p>This is where you will explain each service you offer.We create visually 
+                    appealing and responsive websites that engage users across all devices, 
+                    ensuring a seamless browsing experience.make sure to explain your service in a concise yet thorough way</p>
+            </div>
+            <div class="service4">
+                <img src="services-placeholder-image4.png" width="150px" height="120px">
+                <h2>Easy Customization</h2>
+                <p>This is where you will explain each service you offer.We create visually 
+                    appealing and responsive websites that engage users across all devices, 
+                    ensuring a seamless browsing experience.make sure to explain your service in a concise yet thorough way</p>
+            </div>
+            
+        </div>
+    </section>
+
+    
+
+    <script>
+        
+        const images = [
+            ('home-background2.jpg'),
+            ('home-background3.jpg'),
+            ('home-background4.jpg'),
+            ('home-background.jpg')//FIRST IMAGE TO SHOW 
+        ];
+
+        let currentIndex = 0;
+
+        //FUNCTION TO CHANGE BACKGROUND
+        function changeBackground() {
+            document.body.style.backgroundImage = `url(${images[currentIndex]})`; 
+            document.body.style.backgroundSize = "cover"; // Ensure full coverage
+            document.body.style.backgroundPosition = "center";
+            document.body.style.transition = "background-image 1s ease-in-out"; // Smooth transition
+
+            currentIndex = (currentIndex + 1) % images.length;
+            setTimeout(() => {
+                document.body.style.backgroundColor = 'black';
+            }, 500);
+        }
+
+    // Change background every 4 seconds
+        document.body.style.backgroundImage = `url(${images[3]})`;
+
+
+
+        
+
+        setInterval(changeBackground, 3000);
+    </script>
+</body>
+</html>
